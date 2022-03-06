@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> KALKULATOR </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form name="form1">
+      <table class="tabel">
+        <tr>
+          <th class="header" colspan="3" align="center">
+            KALKULATOR SEDERHANA
+          </th>
+        </tr>
+        <tr>
+          <td>Masukkan Angka 1</td>
+          <td>:</td>
+          <td><input class="input" type="number" name="x" /></td>
+        </tr>
+        <tr>
+          <td>Masukkan Angka 2</td>
+          <td>:</td>
+          <td><input class="input" type="number" name="y" /></td>
+        </tr>
+
+        <tr>
+          <td><b>Hasil</b></td>
+          <td>:</td>
+          <td><input class="hsl" name="hasil" disabled /></td>
+        </tr>
+        <tr>
+          <td colspan="3" align="center">
+            <select name="opt">
+              <option value="tambah">+ (Tambah)</option>
+              <option value="kurang">- (Kurang)</option>
+              <option value="kali">* (Kali)</option>
+              <option value="bagi">/ (Bagi)</option>
+              <option value="modulus">% (Modulus)</option>
+            </select>
+            <input type="button" class="btn" value="=" onClick="hitung()" />
+            <input
+              type="button"
+              class="btn"
+              value="CLEAR"
+              onClick="resetForm()"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
+
+<script>
+  function hitung() {
+    var myForm = document.form1;
+    var x = eval(myForm.x.value);
+    var y = eval(myForm.y.value);
+    var pil = myForm.opt.value;
+    if (pil == "tambah") {
+      var z = x + y;
+    } else if (pil == "kurang") {
+      var z = x - y;
+    } else if (pil == "kali") {
+      var z = x * y;
+    } else if (pil == "bagi") {
+      var z = x / y;
+    } else if (pil == "modulus") {
+      var z = x % y;
+    }
+    myForm.hasil.value = z;
+  }
+  function resetForm() {
+    document.form1.reset();
+  }
+</script>
