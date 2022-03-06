@@ -1,0 +1,43 @@
+.btn{
+    background-color: rgb(112, 128, 145);
+    color: 	#FFDFD3;
+    margin: 15px;
+    padding: 10px;
+    font-family: Courier;
+    font-weight: bold;   
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+ .tabel{
+    background-color: 	#FFDFD3;
+    margin: auto;
+    border-style: dotted;
+    border-color: rgb(112, 128, 145);
+    padding: 30px;
+    font-family: Courier;
+    font-size: smaller;
+ }
+
+ .header{
+     color: rgb(112, 128, 145);
+     padding-bottom: 25px;
+     font-size: 35px;
+ }
+
+ .hsl{
+     background-color: 	#FFDFD3;
+     border-style: unset;
+     font-family: Courier; 
+     font-weight: bold;
+     font-size: 16px;
+     margin: 20px;
+     width: 217px;
+ }
+
+ .input{
+    border-color: rgb(112, 128, 145);
+    font-family: Courier;
+ }
+
+ 
